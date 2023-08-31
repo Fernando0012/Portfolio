@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+/*
+ font-family: 'Montserrat', sans-serif;
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+}
+:root {
+    font-size: 10px;
+}
+
+::-webkit-scrollbar{
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track{
+    background-color: #2c2c31;
+  }
+  
+  ::-webkit-scrollbar-thumb{
+    background-color: #eaeaea;
+  }
+
+main {
+    height: 100vh;
+    padding: 1.2rem;
+    background: linear-gradient(rgb(15, 11, 36), rgb(1, 1, 1));
+}
+
+body{
+    background-color: rgb(1, 1, 1);
+}
+
+.container{
+    display: grid;
+    grid-template-areas:
+        "profile"
+        "text"
+        "tech"
+        "project";
+    color: white;
+    height: 100vh;
+    font-family: Montserrat, sans-serif;
+    background: linear-gradient(rgb(15, 11, 36), rgb(1, 1, 1));
+}
+
+
+/*-- Profile --*/
+.profile{
+    display: flex;
+    gap: .9rem;
+    flex-direction: column;
+    align-items: center;
+    grid-area: profile;
+}
+
+#ft {
+    text-align: center;
+    width: 15.2rem;
+    border-radius: 50%;
+}
+
+h1.title {
+    color: white;
+}
+
+.title {
+    text-align: center;
+    font-size: 2.4rem;
+    color: rgb(200, 200, 200);
+}
+
+.text {
+    flex-direction: column;
+    font-size: 1.4rem;
+    width: 35rem;
+    color: rgb(200, 200, 200);
+    grid-area: text / text / text / text;
+    padding: 1.6rem;
+}
+
+/*-- Linguagens --*/
+
+.languages {
+    display: flex;
+    flex-direction: column;
+    grid-area: tech / tech / tech / tech;
+    gap: 2.4rem;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+i.icon {
+    font-size: 2.4rem;
+    transition: color .3s;
+}
+
+.npm:hover{
+  color: #cb3837;
+}
+
+.html:hover{
+    color: #e34f26;
+}
+
+.node:hover{
+    color: rgb(1, 198, 1);
+}
+
+.JS:hover{
+    color: #f7df1e;
+}
+
+.git:hover{
+    color: #f05032;
+}
+
+.projects {
+    margin-top: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: project / project / project / project;
+    gap: 0.8rem;
+}
+
+.projetos {
+    display: grid;
+    grid-template-areas:
+        "salon"
+        "devLinks"
+        "space"
+        "shield";
+    gap: 1.2rem;
+}
+
+@keyframes entering {
+    from{
+      opacity: 0;
+      transform: translateY(-200px);
+    }
+  
+    to{
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.4rem;
+    
+  animation: entering 1s ease-in-out;
+}
+
+.project {
+    height: 20rem;
+    width: 24rem;
+    border-radius: 0.8rem;
+}
+
+.projetos div{
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: .8rem;
+}
+
+.projetos .gallery iframe{
+    transform: scale(1.1);
+}
+
+.btn {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: rgb(200, 200, 200);
+    font-weight: 700;
+    width: 7.4rem;
+    background: rgb(27, 20, 63);
+    padding: 0.8rem;
+    border-radius: 0.8rem;
+    transition: background 0.3s ease 0s;
+}
+
+.btn:hover{
+    color: rgb(253, 249, 249);
+    background: rgb(53, 25, 192);
+    font-weight: 700
+}
+
+.salon {
+    grid-area: salon;
+}
+
+.DevLinks {
+    grid-area: devLinks;
+}
+
+.space {
+    grid-area: space;
+}
+
+.shield {
+    grid-area: shield;
+}
+
+@media (min-width: 700px){
+    :root{
+        font-size: 12px;
+    }
+
+    .projetos {
+        display: grid;
+        grid-template-areas:
+            "salon devLinks"
+            "space shield";
+        gap: 1.2rem;
+    }
+}
