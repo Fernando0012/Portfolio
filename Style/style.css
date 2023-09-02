@@ -37,6 +37,19 @@ body{
     background-color: rgb(1, 1, 1);
 }
 
+/*-- menu --*/
+
+#menu{
+    background: rgb(15, 11, 36);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    color: #E1E1E6;
+
+    height: 52px;
+}
+
+/*-- Main --*/
 .container{
     display: grid;
     grid-template-areas:
@@ -98,7 +111,7 @@ h1.title {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0.8rem;
+    gap: 1.6rem;
 }
 
 i.icon {
